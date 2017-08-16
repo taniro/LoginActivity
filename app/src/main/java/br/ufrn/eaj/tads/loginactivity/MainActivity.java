@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
+
+
     }
 
     public void login (View v){
 
         EditText loginEt = (EditText) findViewById(R.id.email);
         EditText senhaEt = (EditText) findViewById(R.id.senha);
-        
+
         if(loginEt.getText().toString().equals("taniro") && senhaEt.getText().toString().equals("123")){
 
             login = loginEt.getText().toString();
@@ -49,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this,Main2Activity.class));
             finish();
         }else{
-            Toast.makeText(this, "Dados incorretos!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.falha_login), Toast.LENGTH_SHORT).show();
         }
 
     }
+
 
     private void salvaDados() {
 
