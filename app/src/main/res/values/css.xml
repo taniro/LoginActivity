@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="fontes">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="widgets" parent="fontes">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="widgets2" parent="widgets">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>
